@@ -1,0 +1,256 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    min-height: 8vh;
+    background-color: whitesmoke;
+
+    .logo1 {
+        height: 5vh;
+    }
+    .logo2 {
+        height: 5vh;
+        display: none;
+    }
+    .nav-links {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        
+        a { 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10px;
+            margin-right: 10px;
+            text-align: center;
+            font-weight: 200;
+            font-size: 12px;
+            letter-spacing: 2px;
+            height: 8vh;
+            width: 100px;
+            transition: all 0.5s ease;
+
+            &:hover {
+                // color: black;
+            }
+            color: black;
+            text-decoration: none;
+        }
+        li {
+            transition: all 0.5s ease;
+            height: 8vh;
+            &:hover {
+                cursor: pointer;
+                // color: black;
+                // background-color: white;
+            }
+            list-style: none;
+        }
+        
+    }
+   
+    .burger div {
+        width: 25px;
+        height: 2px;
+        background-color: black;
+        margin: 5px;
+        transition: all 0.3s ease;
+    }
+    .burger {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    nav a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    nav .logo2 {
+        height: 5vh;
+        display: flex;
+    }
+    
+    .nav-links {
+        z-index: 0;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        right: 0px;
+        height: 60vh;
+        top: 8vh;
+        background-color: whitesmoke;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateY(-120%);
+        transition: transform 1s ease-in;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+    nav .burger {
+        z-index: 1;
+        display: block;
+        cursor: pointer;
+    }
+    nav .logo1 {
+        display: none;
+    }
+    nav #logo1 {
+        display: none;
+    }
+
+}
+
+.nav-active {
+    transform: translateY(0%);
+}
+
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+
+
+.landing {
+    // width: 100vw;
+    margin-bottom: -8px;
+    #myVideo {
+        width: 100vw;
+    }
+}
+
+.diamond_menu {
+    // width: 100vw;
+    height: 8vh;
+    background-color: #83b3e9;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // About Me
+
+// .about_me {
+//     // width: 100vw;
+//     height: 60vh;
+//     display: grid;
+//     grid-template-columns: 10vw 10vw 10vw 10vw 10vw 50vw;
+//     grid-template-rows: 30vh 30vh;
+//     .leanne_img {
+//         display: grid;
+//         grid-template-columns: 1fr 1fr 1fr 1fr;
+
+
+//         grid-area: 1 / 1 / 3 / 5;
+//         background: url("../imgs/about_me/Leanne_1.jpg");
+//         background-size: cover;
+//         background-position: center;
+//         // &:hover {
+//         //     background: url("../imgs/about_me/Leanne_2.jpg");
+//         //     background-size: cover;
+//         //     background-position: center;
+//         // }
+       
+//     }
+//     .leanne_img1 {
+//         height: 100%;
+//         width: 100%;
+//         z-index: 1;
+//         // background-color: yellow;
+//         &:hover {
+//             .leanne_img {
+
+//             }
+//         }
+//     }
+//     .leanne_img2 {
+//         height: 100%;
+//         width: 100%;
+//         z-index: 1;
+//         // background-color: red;
+//     }
+//     .leanne_img3 {
+//         height: 100%;
+//         width: 100%;
+//         z-index: 1;
+//         // background-color: green;
+//     }
+//     .leanne_img4 {
+//         height: 100%;
+//         width: 100%;
+//         z-index: 1;
+//         // background-color: purple;
+//     }
+
+//     .about {
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         align-items: center;
+//         grid-area: 1 / 5 / 3 / 7;
+//     }
+
+// }
