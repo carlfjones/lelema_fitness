@@ -1,0 +1,283 @@
+$primary-color: #92e5e5;
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    min-height: 8vh;
+    background-color: whitesmoke;
+
+
+    .logo1 {
+        height: 5vh;
+    }
+    .logo2 {
+        height: 5vh;
+        display: none;
+    }
+    .nav-links {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        
+        a { 
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10px;
+            margin-right: 10px;
+            text-align: center;
+            font-weight: 200;
+            font-size: 12px;
+            letter-spacing: 2px;
+            height: 8vh;
+            width: 100px;
+            transition: all 0.5s ease;
+
+            &:hover {
+                // color: black;
+            }
+            color: black;
+            text-decoration: none;
+        }
+        li {
+            cursor: pointer;
+            transition: all 0.5s ease;
+            height: 8vh;
+            &:hover {
+                cursor: pointer;
+                // color: black;
+                // background-color: white;
+            }
+            list-style: none;
+        }
+        
+    }
+   
+    .burger div {
+        width: 25px;
+        height: 2px;
+        background-color: black;
+        margin: 5px;
+        transition: all 0.3s ease;
+    }
+    .burger {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    nav .logo2 {
+        height: 5vh;
+        display: flex;
+    }
+    
+    .nav-links {
+        z-index: 999;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        right: 0px;
+        height: 40vh;
+        top: 8vh;
+        background-color: whitesmoke;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateY(-120%);
+        transition: transform 1s ease-in;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+    nav .burger {
+        z-index: 1;
+        display: block;
+        cursor: pointer;
+    }
+    nav .logo1 {
+        display: none;
+    }
+    nav #logo1 {
+        display: none;
+    }
+
+}
+
+.nav-active {
+    transform: translateY(0%);
+}
+
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 5px);
+    transition: transform 0.5s ease-in;
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -5px);
+    transition: transform 0.5s ease-in;
+}
+
+
+// Landing section
+
+.landing {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20vh auto;
+    @media only screen and (max-width: 768px) {
+        grid-template-columns:  1fr;
+        grid-template-rows: 50vh auto;
+    }
+
+    .title {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: center;
+        grid-area: 1 / 1 / 2 / 3;
+        font-size: 4rem;
+        font-weight: 800;
+        z-index: 1;
+        justify-self: center;
+        padding: 0;
+        margin: 0;
+        color: white;
+        @media only screen and (max-width: 768px) {
+            font-size: 2rem;
+            align-items: center;
+        }
+        p {
+            border-style: solid;
+            border-width: 10px;
+            padding-right: 30px;
+            padding-left: 30px;}
+        }
+
+
+    .pic {
+        background: url("../imgs/philosophy/philosophy.jpg");
+        background-size: cover;
+        background-position: center;
+        grid-area: 1 / 1 / 3 / 2;
+        @media only screen and (max-width: 768px) {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+    }
+
+    .topo_and_blurb {
+        background: url("../imgs/philosophy/topo_background.png");
+        background-size: cover;
+        background-position: center;
+        grid-area: 1 / 2 / 3 / 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media only screen and (max-width: 768px) {
+            grid-area: 2 / 1 / 3 / 2;
+        }
+    }
+    .blurb {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        grid-area: 2 / 2 / 3 / 3;
+        color: white;
+        background-color: $primary-color;
+        width: 40vw;
+        line-height: 2;
+        text-align: justify;
+        justify-self: center;
+        align-self: center;
+        padding: 0px 10px 10px 10px;
+        @media only screen and (max-width: 768px) {
+            grid-area: 2 / 1 / 3 / 2;
+            width: 80vw;
+        }
+
+        #p1 {
+            font-style: italic;
+            font-weight: 600;
+            letter-spacing: 2px;
+            font-size: 25px;
+            text-align: center;
+        }
+        #image1 {
+            margin-top: 50px;
+        }
+
+        .image {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 50px;
+            }
+        }
+       
+    }
+}
+
+
+
+
+
+
+
+
+
+
+// FOOTER
+
+.footer {
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .footer_menu {
+        text-align: center;
+        padding: 10px;
+        font-weight: 200;
+        font-size: 12px;
+        cursor: pointer;
+    }
+    img {
+        height: 30px;
+    }
+    a {
+        text-decoration: none;
+        color: black
+    }
+}

@@ -1,20 +1,4 @@
-const leanne_img = document.getElementById("leanne_img");
-const div1 = document.getElementsByClassName("leanne_img1");
-
-const words = document.getElementById("words");
-
-function myScript(){
-    words.style.color= "red";
-}
-
-function myScript2(){
-    words.style.color= "black";
-}
-
-words.addEventListener("mouseover", myScript);
-words.addEventListener("mouseout", myScript2);
-
-
+// NAVBAR
 
 const navSlide = () => {
     const burger = document.querySelector('.burger');
@@ -51,3 +35,47 @@ const app = () => {
 }
 
 app();
+
+
+// DIAMOND FUNCTION
+
+
+
+$(document).ready(function(){
+
+    // Change images on hover
+
+    $("#pic1").hover(function(){
+        $(".diamond_imgs").css({"background": 'url("assets/imgs/about_me/diamond/1.jpg")', "background-size": 'cover', "background-position": 'center'});
+    }, function() {
+        $(".diamond_imgs").css({"background": 'url("assets/imgs/about_me/diamond/1.jpg")', "background-size": 'cover', "background-position": 'center'});
+    });
+
+    $("#pic2").hover(function(){
+        $(".diamond_imgs").css({"background": 'url("assets/imgs/about_me/diamond/2.jpg")', "background-size": 'cover', "background-position": 'center'});
+    }, function() {
+        $(".diamond_imgs").css({"background": 'url("assets/imgs/about_me/diamond/1.jpg")', "background-size": 'cover', "background-position": 'center'});
+    });
+
+    $("#pic3").hover(function(){
+        $(".diamond_imgs").css({"background": 'url("assets/imgs/about_me/diamond/3.jpg")', "background-size": 'cover', "background-position": 'center'});
+    }, function() {
+        $(".diamond_imgs").css({"background": 'url("assets/imgs/about_me/diamond/1.jpg")', "background-size": 'cover', "background-position": 'center'});
+    });
+
+    $("#pic4").hover(function(){
+        $(".diamond_imgs").css({"background": 'url("assets/imgs/about_me/diamond/4.jpg")', "background-size": 'cover', "background-position": 'center'});
+    }, function() {
+        $(".diamond_imgs").css({"background": 'url("assets/imgs/about_me/diamond/1.jpg")', "background-size": 'cover', "background-position": 'center'});
+    });
+
+    $("#pic5").hover(function(){
+        $(".diamond_imgs").css({"background": 'url("assets/imgs/about_me/diamond/5.jpg")', "background-size": 'cover', "background-position": 'center'});
+    }, function() {
+        $(".diamond_imgs").css({"background": 'url("assets/imgs/about_me/diamond/1.jpg")', "background-size": 'cover', "background-position": 'center'});
+    });
+
+
+
+});
+

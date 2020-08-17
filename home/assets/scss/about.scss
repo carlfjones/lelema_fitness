@@ -1,0 +1,290 @@
+$primary-color: #92e5e5;
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    min-height: 8vh;
+    background-color: whitesmoke;
+
+
+    .logo1 {
+        height: 5vh;
+    }
+    .logo2 {
+        height: 5vh;
+        display: none;
+    }
+    .nav-links {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        
+        a { 
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10px;
+            margin-right: 10px;
+            text-align: center;
+            font-weight: 200;
+            font-size: 12px;
+            letter-spacing: 2px;
+            height: 8vh;
+            width: 100px;
+            transition: all 0.5s ease;
+
+            &:hover {
+                // color: black;
+            }
+            color: black;
+            text-decoration: none;
+        }
+        li {
+            cursor: pointer;
+            transition: all 0.5s ease;
+            height: 8vh;
+            &:hover {
+                cursor: pointer;
+                // color: black;
+                // background-color: white;
+            }
+            list-style: none;
+        }
+        
+    }
+   
+    .burger div {
+        width: 25px;
+        height: 2px;
+        background-color: black;
+        margin: 5px;
+        transition: all 0.3s ease;
+    }
+    .burger {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    nav .logo2 {
+        height: 5vh;
+        display: flex;
+    }
+    
+    .nav-links {
+        z-index: 999;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        right: 0px;
+        height: 40vh;
+        top: 8vh;
+        background-color: whitesmoke;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateY(-120%);
+        transition: transform 1s ease-in;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+    nav .burger {
+        z-index: 1;
+        display: block;
+        cursor: pointer;
+    }
+    nav .logo1 {
+        display: none;
+    }
+    nav #logo1 {
+        display: none;
+    }
+
+}
+
+.nav-active {
+    transform: translateY(0%);
+}
+
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 5px);
+    transition: transform 0.5s ease-in;
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -5px);
+    transition: transform 0.5s ease-in;
+}
+
+
+// Landing
+.landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background: url("../imgs/about_me/abt_me_landing.jpg");
+    background-size: cover;
+    background-position: 0% 70%;
+
+    .title {
+        padding-right: 30px;
+        padding-left: 30px;
+        color: white;
+        font-size: 4rem;
+        font-weight: 700;
+        margin-bottom: 50px;
+        border-width: 10px;
+        border-style: solid;
+        @media only screen and (max-width: 768px) {
+            font-size: 2rem;
+        }
+    }
+}
+
+
+// About Section
+
+.about_section {
+    height: auto;
+    background: url("../imgs/about_me/background_long.png");
+    background-color: $primary-color;
+    background-size: cover;
+    background-position: center;
+    .about_grid {
+        height: auto;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 650px 1fr;
+        justify-items: center;
+        align-items: center;
+        @media only screen and (max-width: 768px) {
+            grid-template-columns: 100vw;
+            grid-template-rows: 500px 1fr;
+        }
+        
+        .diamond_imgs {
+            display: flex;
+            height: 400px;
+            width: 400px;
+            background: url("../imgs/about_me/diamond/1.jpg");
+            background-size: cover;
+            background-position: center;
+            transform: rotate(45deg);
+            border-style: solid;
+            border-color: white;
+            background-color: white;
+            border-width: 8px;
+            @media only screen and (max-width: 768px) {
+                height: 250px;
+                width: 250px;
+            }
+            .pics {
+                height: 400px;
+                width: 82px;
+            }
+
+        }
+    }
+    .about_blurb {
+        background-color: $primary-color;
+        text-align: justify;
+        margin: 0px 200px 50px 200px;
+        padding: 20px;
+        color: white;
+        @media only screen and (max-width: 768px) {
+            margin: 0px 0px 0px 0px;
+            width: 80vw;
+    
+        }
+    }
+    h2 {
+        display: grid;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        grid-template-columns: minmax(20px, 1fr) auto minmax(20px, 1fr);
+        grid-gap: 20px;
+    }
+    h2:before,
+    h2:after {
+        content: '';
+        border-top: 2px solid;
+    }
+
+    h3 {
+        display: grid;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        grid-template-columns: minmax(20px, 1fr) auto minmax(20px, 1fr);
+        grid-gap: 20px;
+    }
+    h3:before,
+    h3:after {
+        content: '';
+        border-top: 2px solid;
+    }
+    
+
+}
+
+
+
+// FOOTER
+
+.footer {
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .footer_menu {
+        text-align: center;
+        padding: 10px;
+        font-weight: 200;
+        font-size: 12px;
+        cursor: pointer;
+    }
+    img {
+        height: 30px;
+    }
+    a {
+        text-decoration: none;
+        color: black
+    }
+}

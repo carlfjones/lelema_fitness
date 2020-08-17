@@ -24,10 +24,10 @@
                     <a href="./about.html">About Me</a>
                 </li>
                 
-                <a id="logo1" href="./home.html"><img src="./imgs/logo.png" alt="" class="logo1"></a>
+                <a id="logo1" href="./home.html"><img src="./assets/imgs/logo.png" alt="" class="logo1"></a>
 
                 <li>
-                    <a href="./training.html">Training</a>
+                    <a href="./train.html">Training</a>
                 </li>
     
                 <li>
@@ -42,18 +42,30 @@
         </nav>
 
         <section class="landing">
-            <video autoplay muted loop id="myVideo">
+            <video playsinline autoplay muted loop id="myVideo">
                 <source src="../My Video2.mov" type="video/mp4">
               </video>
         </section>
 
-        <section class="diamond_menu">
-            <div class="logo_white"></div>
+        <section class="diamond_menu_container">
+            <div class="diamond_menu">
+                <div class="box" id="philo"><a href="./philosophy.html"><p>Philosophy</p></a></div>
+                <div class="box" id="about"><a href="./about.html"><p>About</p></a></div>
+                <div class="box" id="train"><a href="./train.html"><p>Training</p></a></div>
+                <div class="box" id="contact"><a href="./contact.html"><p>Contact</p></a></div>
+            </div>
+        </div>
         </section>
 
 
 
-
+        <section class="footer">
+            <a href="./home.html"><div class="footer_icon"><img src="../home/assets/imgs/logo.png" alt=""></div></a>
+            <a href="./philosophy.html"><div class="footer_menu">Philosophy</div></a>
+            <a href="./about.html"><div class="footer_menu">About Me</div></a>
+            <a href="./train.html"><div class="footer_menu">Training</div></a>
+            <a href="./contact.html"><div class="footer_menu">Contact</div></a>
+        </section>
 
 
 
@@ -80,5 +92,6 @@
         </section> -->
 
     <script src="./assets/js/main.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
 </body>
 </html>
