@@ -88,6 +88,7 @@ nav {
     }
     
     .nav-links {
+        z-index: 999;
         margin: 0;
         padding: 0;
         position: absolute;
@@ -158,6 +159,10 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    @media only screen and (max-width: 768px) {
+        height: 80vh;
+    }
+    
     .form_container {
         border-radius: 15px;
         display: flex;
@@ -169,6 +174,11 @@ nav {
         background: url("../imgs/diamond_menu/topo_background.png");
         background-size: cover;
         background-position: center;
+        @media only screen and (max-width: 768px) {
+            height: 80vh;
+            width: 100vw;
+            border-radius: 0px;
+        }
         h2 {
             color: white;
             border-style: solid;
@@ -202,6 +212,9 @@ nav {
                     border-style: none;
                     padding: 10px 20px 10px 20px;
                     border-radius: 15px;
+                    @media only screen and (max-width: 768px) {
+                        background-color: white;
+                    }
                     
                 }
             }

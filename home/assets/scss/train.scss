@@ -88,6 +88,7 @@ nav {
     }
     
     .nav-links {
+        z-index: 999;
         margin: 0;
         padding: 0;
         position: absolute;
@@ -157,6 +158,11 @@ nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    @media only screen and (max-width: 768px) {
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 40vh 40vh 1fr;
+    }
     .section1 {
         background: url("../imgs/diamond_menu/topo_background.png");
         background-position: center;
@@ -174,6 +180,9 @@ nav {
             border-style: solid;
             border-color: white;
             border-width: 10px;
+            @media only screen and (max-width: 768px) {
+                font-size: 2rem;
+            }
         }
         .blurb {
             background-color: $primary-color;
